@@ -8,7 +8,23 @@ export class GeminiService {
   private ai: GoogleGenAI;
 
   constructor() {
-    this.ai = new GoogleGenAI({ apiKey: process.env['API_KEY'] });
+    const apiKey = this.getApiKey();
+    if (!apiKey) {
+      console.error('API Key not found. Please set VITE_API_KEY or API_KEY in your environment.');
+    }
+    this.ai = new GoogleGenAI({ apiKey: apiKey || 'MISSING_KEY' });
+  }
+
+  private getApiKey(): string {
+    // Check for Vite environment variable (standard for modern web builds)
+    if (typeof import.meta !== 'undefined' && (import.meta as any).env && (import.meta as any).env['VITE_API_KEY']) {
+      return (import.meta as any).env['VITE_API_KEY'];
+    }
+    // Check for standard Node/Webpack environment variable
+    if (typeof process !== 'undefined' && process.env && process.env['API_KEY']) {
+      return process.env['API_KEY'];
+    }
+    return '';
   }
 
   async generateText(prompt: string, systemInstruction?: string): Promise<string> {
@@ -23,7 +39,7 @@ export class GeminiService {
       return response.text || "No response generated.";
     } catch (error) {
       console.error('GenAI Error:', error);
-      return "Error connecting to AgriBoost AI. Please try again.";
+      return "Error connecting to AgriBoost AI. Please check your API Key connection.";
     }
   }
 
