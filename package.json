@@ -1,6 +1,6 @@
 {
   "name": "agriboost-ai",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -8,11 +8,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@angular/common": "^21.0.0",
-    "@angular/compiler": "^21.0.0",
-    "@angular/core": "^21.0.0",
-    "@angular/forms": "^21.0.0",
-    "@angular/platform-browser": "^21.0.0",
+    "@angular/common": "^19.0.0",
+    "@angular/compiler": "^19.0.0",
+    "@angular/core": "^19.0.0",
+    "@angular/forms": "^19.0.0",
+    "@angular/platform-browser": "^19.0.0",
     "@google/genai": "^1.0.0",
     "d3": "^7.9.0",
     "rxjs": "~7.8.0",
@@ -20,13 +20,13 @@
   },
   "devDependencies": {
     "@analogjs/vite-plugin-angular": "^1.10.0",
-    "@angular/compiler-cli": "^21.0.0",
-    "@types/d3": "^7.0.0",
+    "@angular/compiler-cli": "^19.0.0",
+    "@types/d3": "^7.4.3",
     "@types/node": "^20.0.0",
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.0",
     "tailwindcss": "^3.4.0",
-    "typescript": "~5.9.0",
+    "typescript": "~5.6.2",
     "vite": "^6.0.0"
   }
 }
