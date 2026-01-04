@@ -1,0 +1,8 @@
+{
+  "name": "AgriBoost AI",
+  "description": "An all-in-one AI agriculture assistant for farmers offering crop prediction, disease identification, and decision support.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
