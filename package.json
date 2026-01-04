@@ -21,7 +21,7 @@
   "devDependencies": {
     "@analogjs/vite-plugin-angular": "^1.10.0",
     "@angular/compiler-cli": "^21.0.0",
-    "@types/d3": "^7.5.0",
+    "@types/d3": "^7.0.0",
     "@types/node": "^20.0.0",
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.0",
